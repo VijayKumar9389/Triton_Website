@@ -11,6 +11,7 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
+text-align: center;
 max-width: 1100px;
 margin: 0 auto;
 `

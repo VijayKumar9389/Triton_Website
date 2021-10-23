@@ -57,6 +57,10 @@ transition: all 0.2s ease-in-out;
     transform: scale(1.05);
     transition: all 0.2s ease-in-out;
 }
+
+@media screen and (max-width: 480px) {
+    width:80%
+}
 `
 
 export const ServicesIcon = styled.img`
