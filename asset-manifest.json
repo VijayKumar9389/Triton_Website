@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Triton-Website/static/css/main.aa08afa1.chunk.css",
-    "main.js": "/Triton-Website/static/js/main.626f9bad.chunk.js",
-    "main.js.map": "/Triton-Website/static/js/main.626f9bad.chunk.js.map",
+    "main.js": "/Triton-Website/static/js/main.a85eaabb.chunk.js",
+    "main.js.map": "/Triton-Website/static/js/main.a85eaabb.chunk.js.map",
     "runtime-main.js": "/Triton-Website/static/js/runtime-main.973ef337.js",
     "runtime-main.js.map": "/Triton-Website/static/js/runtime-main.973ef337.js.map",
     "static/js/2.dfd23c07.chunk.js": "/Triton-Website/static/js/2.dfd23c07.chunk.js",
@@ -32,6 +32,6 @@
     "static/js/runtime-main.973ef337.js",
     "static/js/2.dfd23c07.chunk.js",
     "static/css/main.aa08afa1.chunk.css",
-    "static/js/main.626f9bad.chunk.js"
+    "static/js/main.a85eaabb.chunk.js"
   ]
 }
