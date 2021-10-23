@@ -53,7 +53,7 @@ justify-content: space-between;
     left: 0;
     overflow: hidden;
     opacity: 1;
-    background: #68bd45;
+    background: red;
     animation: progress-animation 12s infinite
 }
 
