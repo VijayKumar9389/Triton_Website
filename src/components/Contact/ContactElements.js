@@ -110,7 +110,7 @@ padding: 15px;
 margin: 10px 0;
 outline: none;
 border-radius: 10px;
-border:none
+border:none;
 
 `
 
@@ -122,7 +122,7 @@ margin: 20px 0;
 margin-bottom: 50px;
 outline: none;
 border-radius: 10px;
-border:none
+border:none;
 `
 
 export const ContactInfo = styled.div`
