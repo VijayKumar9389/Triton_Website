@@ -72,13 +72,16 @@ justify-content: center;
 export const SidebarRoute = styled(LinkS)`
 border-radius: 50px;
 background: #68bd45;
-white-space: nowrap;
-padding: 16px 64px;
+padding: 14px 20px;
 color: #010606;
 font-size: 16px;
 outline: none;
 border: none;
 cursor: pointer;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 200px;
 transition: all 0.2s ease-in-out;
 text-decoration: none;
 

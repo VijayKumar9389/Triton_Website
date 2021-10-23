@@ -23,6 +23,10 @@ justify-content: center;
 @media screen and (max-width: 768px) {
     height: 860px;
 }
+
+@media screen and (max-width: 468px) {
+    height: 600px;
+}
 `
 
 export const InfoRow = styled.div`

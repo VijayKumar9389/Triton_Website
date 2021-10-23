@@ -5,7 +5,8 @@ import { IoMdArrowRoundForward } from 'react-icons/io';
 import { IoArrowForward, IoArrowBack } from 'react-icons/io5';
 
 const HeroSection = styled.section`
-height: 100vh;
+margin-top: 80px;
+height: 680px;
 max-height: 1100px;
 position: relative;
 overflow: hidden;
@@ -29,11 +30,6 @@ const HeroSlide = styled.div`
 z-index: 1;
 width: 100%;
 height: 100%;
-display: flex;
-justify-content: center;
-align-items: center;
-
-
 `;
 
 const HeroSlider = styled.div`
@@ -43,26 +39,34 @@ left: 0;
 width: 100%;
 height: 100%;
 display: flex;
+text-align: center;
 align-items: center;
-justify-content: center;
+justify-content: space-between;
+
+
 
 &::before{
     content: '';
     position: absolute;
-    z-index: 2;
+    z-index: 10;
     width: calc(var(--width, 0) * 1%);
-    height: 18%;
-    top: 0;
+    height: 10px;
+    top: 70px;
     left: 0;
     overflow: hidden;
     opacity: 1;
     background: #68bd45;
-    animation: progress-animation 12s infinite;
+    animation: progress-animation 15s infinite
 }
+
 
 @keyframes progress-animation {
 0% {width: 0%;}
 100% {width: 100%;}
+}
+
+@media screen and (max-width: 800px) {
+ justify-content: center;
 }
 
 `;
@@ -71,13 +75,19 @@ justify-content: center;
 
 const HeroImage = styled.img`
 position: absolute;
-top: 0;
+bottom: 0;
 right: 0;
-width: 100%;
+width: 55%;
 height: 100vh;
-/* clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%); */
+clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
 object-fit: cover;
 animation: fadeIn 3s;
+
+@media screen and (max-width: 800px) {
+ width: 100%;
+ height: 100%;
+ clip-path: none; 
+}
 
 `;
 
@@ -85,12 +95,34 @@ animation: fadeIn 3s;
 
 const HeroContent = styled.div`
 position: relative;
+margin-left: 4rem;
 z-index: 10px;
 display: flex;
-flex-direction: column;
-width:50%;
+max-width: 1600px;
+width: calc(40% - 60px);
 color: #fff;
-padding: 50px;
+
+@media screen and (max-width: 800px) {
+    margin-left: 0%;
+    width: 80%;
+    text-align: center;
+    
+}
+
+#ContentCover{
+
+    @media screen and (max-width: 800px) {
+
+    z-index: 5;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+}
+    
+  
+}   
 
 h1{
     font-size: clamp(1rem, 6vh, 2rem);
@@ -100,32 +132,8 @@ h1{
     text-align: center;
     margin-bottom: 0.8rem;
     animation: liftfadeIn 2s;
-    z-index: 10;    
-}
-
-p {
-    padding-top: 20px;
-    margin-bottom: 1.2rem;
-    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
-    text-align: left;
-    animation: dropfadeIn 2s;
-    position: relative;
-    z-index: 10;
-}
-
-&::before{
-    content: '';
-    position: absolute;
-    z-index: 2;
-    width: 100%;
-    height: 100%;
-    bottom: 0vh;
-    left: 0;
-    overflow: hidden;
-    opacity: 1;
-    z-index: 1000;
-    background: rgba(0, 0, 0, 0.5) 100%
-
+    z-index: 12;
+    
 }
 
 @keyFrames dropfadeIn {
@@ -146,6 +154,14 @@ p {
     }
 }
 
+p {
+    padding-top: 20px;
+    margin-bottom: 1.2rem;
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+    text-align: left;
+    animation: dropfadeIn 2s;
+}
+
 `;
 
 const Arrow = styled(IoMdArrowRoundForward)`
@@ -154,9 +170,14 @@ margin-left: 0.5rem;
 
 const SliderButtons = styled.div`
 position: absolute;
+bottom: 50px;
+left: 19%;
 display: flex;
-bottom: 10%;
 z-index: 10;
+
+@media screen and (max-width: 800px) {
+    left: auto;
+}
 `
 
 const arrowButtons = css`
@@ -193,7 +214,7 @@ const Hero = ({ slides }) => {
 
     useEffect(() => {
 
-        timeout.current = setTimeout(nextSlide, 12000)
+        timeout.current = setTimeout(nextSlide, 15000)
 
         return function () {
             if (timeout.current) {
@@ -223,10 +244,14 @@ const Hero = ({ slides }) => {
                             {index === current && (
                                 <HeroSlider>
                                     <HeroImage src={slide.image} alt={slide.alt} />
+
                                     <HeroContent>
-                                        <h1 id="test">{slide.title}</h1>
-                                        <p>{slide.price}</p>
+                                        <div id='ContentCover'>
+                                            <h1 id="test">{slide.title}</h1>
+                                            <p>{slide.price}</p>
+                                        </div>
                                     </HeroContent>
+
                                 </HeroSlider>
                             )};
                         </HeroSlide>

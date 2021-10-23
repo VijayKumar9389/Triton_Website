@@ -22,8 +22,9 @@ const Navbar = (props) => {
 
     const changeNav = () => {
         
-        if (window.scrollY >= 720) {
+        if (window.scrollY >= 610) {
             setScrollNav(true)
+            
         } else {
             setScrollNav(false)
         }

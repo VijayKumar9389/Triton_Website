@@ -37,7 +37,8 @@ const Contact = () => {
 
     return (
         <ContactContainer id='contact'>
-            <ContactH1>Contact</ContactH1>
+            <div id='H2Wrapper' ><ContactH1>Contact</ContactH1></div>
+            
             <Contactwrapper>
                 <ContactInfo>
                     <ContactInfoContainer>
@@ -56,7 +57,7 @@ const Contact = () => {
                         </ContactImgWrapper>
                     </ContactInfoContainer>
                     <MapContainer>
-                        <iframe id='Map'  allow="geolocation" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2602.8852793764227!2d-122.7941275843106!3d49.27857097933079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54867f3437f475ab%3A0x41860b56507ca79b!2s3030%20Lincoln%20Ave%20%23%20211%2C%20Coquitlam%2C%20BC%20V3B%206B4!5e0!3m2!1sen!2sca!4v1634880952124!5m2!1sen!2sca" allowfullscreen="" loading="lazy"></iframe>
+                        <iframe id='Map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2602.8852793764227!2d-122.7941275843106!3d49.27857097933079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54867f3437f475ab%3A0x41860b56507ca79b!2s3030%20Lincoln%20Ave%20%23%20211%2C%20Coquitlam%2C%20BC%20V3B%206B4!5e0!3m2!1sen!2sca!4v1634880952124!5m2!1sen!2sca" allowfullscreen=""></iframe>
                     </MapContainer>
                 </ContactInfo>
                 <ContactForm>

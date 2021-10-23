@@ -10,6 +10,13 @@ align-items: center;
 text-align: center;
 min-height: 900px;
 
+#H2Wrapper{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
 `
 export const ContactImg = styled.img`
 
@@ -27,6 +34,11 @@ font-size: 2.5rem;
 color: #fff;
 padding: 100px;
 text-transform: uppercase;
+margin: auto;
+
+@media screen and (max-width: 768px) {
+    padding-bottom: 60px;
+}
 `
 
 export const ContactH2 = styled.h2`

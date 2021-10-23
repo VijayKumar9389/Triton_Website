@@ -7,8 +7,9 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
+text-align: center;
 background: #f7f7f7;
-padding-bottom: 150px;
+padding-bottom: 100px;
 
 
 @media screen and (max-width: 768px) {
@@ -22,7 +23,6 @@ padding-bottom: 150px;
 
 export const ServicesWrapper = styled.div`
 max-width: 100%;
-margin: 0 ;
 display: grid;
 grid-template-columns: 1fr 1fr 1fr 1fr;
 align-items: center;
@@ -37,6 +37,12 @@ padding: 0 50px;
 @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
     padding: 0 20px;
+}
+
+@media screen and (max-width: 480px) {
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+
 }
 `
 
@@ -59,7 +65,7 @@ transition: all 0.2s ease-in-out;
 }
 
 @media screen and (max-width: 480px) {
-    width:80%
+    width: fit-content;
 }
 `
 
