@@ -53,8 +53,8 @@ justify-content: space-between;
     left: 0;
     overflow: hidden;
     opacity: 1;
-    background: red;
-    animation: progress-animation 12s infinite
+    background: blue;
+    animation: progress-animation 12s infinite;
 }
 
 @keyframes progress-animation {
