@@ -8,7 +8,9 @@ import SigninPage from './pages/signin';
 function App() {
   return (
     <Router basename={process.env.PUBLIC_URL}>
-      <Home />
+      <Switch>
+        <Route exact path="/" component={Home} exact />
+      </Switch>
     </Router>
   );
 }
