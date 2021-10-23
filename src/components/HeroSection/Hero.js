@@ -29,6 +29,9 @@ const HeroSlide = styled.div`
 z-index: 1;
 width: 100%;
 height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
 
 
 `;
@@ -41,7 +44,7 @@ width: 100%;
 height: 100%;
 display: flex;
 align-items: center;
-justify-content: space-between;
+justify-content: center;
 
 &::before{
     content: '';
@@ -53,7 +56,7 @@ justify-content: space-between;
     left: 0;
     overflow: hidden;
     opacity: 1;
-    background: blue;
+    background: #68bd45;
     animation: progress-animation 12s infinite;
 }
 
@@ -70,29 +73,24 @@ const HeroImage = styled.img`
 position: absolute;
 top: 0;
 right: 0;
-width: 55%;
+width: 100%;
 height: 100vh;
-clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+/* clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%); */
 object-fit: cover;
 animation: fadeIn 3s;
+
 `;
 
 
 
 const HeroContent = styled.div`
 position: relative;
-margin-left: 5rem;
-margin-top: 100px;
 z-index: 10px;
 display: flex;
 flex-direction: column;
-max-width: 1600px;
-width: calc(40% - 60px);
+width:50%;
 color: #fff;
-
-@media screen and (max-width: 768px) {
-    margin-left: 2rem;
-    }
+padding: 50px;
 
 h1{
     font-size: clamp(1rem, 6vh, 2rem);
@@ -102,14 +100,32 @@ h1{
     text-align: center;
     margin-bottom: 0.8rem;
     animation: liftfadeIn 2s;
-    
+    z-index: 10;    
+}
 
+p {
+    padding-top: 20px;
+    margin-bottom: 1.2rem;
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+    text-align: left;
+    animation: dropfadeIn 2s;
+    position: relative;
+    z-index: 10;
+}
 
-    @media screen and (max-width: 768px) {
-    text-align:left;
-    width: calc(50% - 50px);
-    }
-    
+&::before{
+    content: '';
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    bottom: 0vh;
+    left: 0;
+    overflow: hidden;
+    opacity: 1;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.5) 100%
+
 }
 
 @keyFrames dropfadeIn {
@@ -130,14 +146,6 @@ h1{
     }
 }
 
-p {
-    padding-top: 20px;
-    margin-bottom: 1.2rem;
-    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
-    text-align: left;
-    animation: dropfadeIn 2s;
-}
-
 `;
 
 const Arrow = styled(IoMdArrowRoundForward)`
@@ -146,9 +154,8 @@ margin-left: 0.5rem;
 
 const SliderButtons = styled.div`
 position: absolute;
-bottom: 50px;
-left: 19%;
 display: flex;
+bottom: 10%;
 z-index: 10;
 `
 
