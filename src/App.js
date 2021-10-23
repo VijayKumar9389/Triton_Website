@@ -1,5 +1,5 @@
 import './App.css';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import {HashRouter as Router, Switch, Route} from 'react-router-dom'
 import Home from './pages';
 import SigninPage from './pages/signin';
 
@@ -7,9 +7,9 @@ import SigninPage from './pages/signin';
 
 function App() {
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router>
       <Switch>
-        <Route exact path="/" component={Home} exact />
+        <Route path="/" component={Home} exact />
       </Switch>
     </Router>
   );
