@@ -35,6 +35,8 @@ const Contact = () => {
         setHover(!hover)
     }
 
+
+
     return (
         <ContactContainer id='contact'>
             <div id='H2Wrapper' ><ContactH1>Contact</ContactH1></div>

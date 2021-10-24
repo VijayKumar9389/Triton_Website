@@ -3,15 +3,18 @@ import styled, { css } from 'styled-components/macro';
 import { Button } from './Button';
 import { IoMdArrowRoundForward } from 'react-icons/io';
 import { IoArrowForward, IoArrowBack } from 'react-icons/io5';
+import aos from 'aos';
+import "aos/dist/aos.css"
 
 const HeroSection = styled.section`
 margin-top: 80px;
 height: 680px;
-max-height: 1100px;
 position: relative;
 overflow: hidden;
 background-color: black;
 z-index: 15;
+width: 100%;
+overflow-x: hidden;
 `;
 
 const HeroWrapper = styled.div`
@@ -45,19 +48,19 @@ justify-content: space-between;
 
 
 
-&::before{
+ &::before{
     content: '';
     position: absolute;
     z-index: 10;
     width: calc(var(--width, 0) * 1%);
-    height: 10px;
+    height: 15px;
     top: 70px;
     left: 0;
     overflow: hidden;
     opacity: 1;
     background: #68bd45;
     animation: progress-animation 15s infinite
-}
+} 
 
 
 @keyframes progress-animation {
@@ -78,10 +81,9 @@ position: absolute;
 bottom: 0;
 right: 0;
 width: 55%;
-height: 100vh;
+height: 100%;
 clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
 object-fit: cover;
-animation: fadeIn 3s;
 
 @media screen and (max-width: 800px) {
  width: 100%;
@@ -95,7 +97,7 @@ animation: fadeIn 3s;
 
 const HeroContent = styled.div`
 position: relative;
-margin-left: 4rem;
+margin-left: 5%;
 z-index: 10px;
 display: flex;
 max-width: 1600px;
@@ -117,7 +119,7 @@ color: #fff;
     height: 100%;
     width: 100%;
     border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 10px;
 }
     
@@ -171,12 +173,15 @@ margin-left: 0.5rem;
 const SliderButtons = styled.div`
 position: absolute;
 bottom: 50px;
-left: 19%;
 display: flex;
 z-index: 10;
+left: 8rem;
+
 
 @media screen and (max-width: 800px) {
     left: auto;
+    width: 100%;
+    justify-content: space-between;
 }
 `
 
@@ -188,22 +193,36 @@ cursor: pointer;
 background: #000d1a;
 border-radius: 50px;
 padding: 10px;
-margin-right: 1rem;
 user-select: none;
 transition: 0.3s;
 
+@media (hover: hover) {
 &:hover {
-    background: #68bd45;
+    background: #68bd45; 
     transform: scale(1.05);
 }
+}
+
+
 `
 
 const PrevArrow = styled(IoArrowBack)`
 ${arrowButtons}
+-webkit-tap-highlight-color: transparent;
+
+@media screen and (max-width: 800px) {
+margin-left: 5rem;
+}
 `
 
 const NextArrow = styled(IoArrowForward)`
 ${arrowButtons}
+-webkit-tap-highlight-color: transparent;
+margin-left: 3rem;
+
+@media screen and (max-width: 800px) {
+margin-right: 5rem;
+}
 `
 
 const Hero = ({ slides }) => {
@@ -235,6 +254,8 @@ const Hero = ({ slides }) => {
         setCurrent(current === 0 ? length : current - 1)
     };
 
+    aos.init()
+
     return (
         <HeroSection id='home'>
             <HeroWrapper>
@@ -243,7 +264,7 @@ const Hero = ({ slides }) => {
                         <HeroSlide key={index}>
                             {index === current && (
                                 <HeroSlider>
-                                    <HeroImage src={slide.image} alt={slide.alt} />
+                                    <HeroImage src={slide.image} alt={slide.alt} data-aos="fade-in" data-aos-duration="2000" />
 
                                     <HeroContent>
                                         <div id='ContentCover'>
@@ -259,6 +280,7 @@ const Hero = ({ slides }) => {
                 })};
                 <SliderButtons>
                     <PrevArrow onClick={prevSlide} />
+                    <div id="spacer"></div>
                     <NextArrow onClick={nextSlide} />
                 </SliderButtons>
             </HeroWrapper>

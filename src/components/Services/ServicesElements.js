@@ -10,6 +10,7 @@ align-items: center;
 text-align: center;
 background: #f7f7f7;
 padding-bottom: 100px;
+overflow-x: hidden;
 
 
 @media screen and (max-width: 768px) {
@@ -80,6 +81,7 @@ font-size: 2.5rem;
 color: black;
 padding: 100px;
 text-transform: uppercase;
+width: 100%;
 `
 
 export const ServicesH2 = styled.h2`

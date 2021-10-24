@@ -6,7 +6,10 @@ import Home from './pages';
 
 function App() {
   return (
-        <Home/>
+    <div id='homepage'>
+      <Home/>
+    </div>
+        
   );
 }
 

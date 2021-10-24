@@ -9,12 +9,15 @@ justify-content: center;
 align-items: center;
 text-align: center;
 min-height: 900px;
+width: 100%;
+overflow: hidden;
+
 
 #H2Wrapper{
     display: flex;
     justify-content: center;
     text-align: center;
-    width: 100%;
+
 }
 
 `

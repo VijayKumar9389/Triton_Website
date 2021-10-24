@@ -19,15 +19,13 @@ const Home = () => {
     }
 
     return (
-        <div>
+        <div >
             <Sidebar isOpen={isOpen} toggle={toggle} />
             <Navbar toggle={toggle} />
             <Hero slides={SliderData}/>
             <Services />
             <ServiceContainer />
             <Contact />
-
-
             <Footer />
         </div>
     )

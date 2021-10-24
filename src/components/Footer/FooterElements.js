@@ -3,6 +3,8 @@ import {Link} from 'react-router-dom'
 
 export const FooterContainer = styled.footer`
 background-color: #151922;
+width: 100%;
+overflow-x: hidden;
 `
 
 export const FooterWrap = styled.div`
@@ -12,7 +14,6 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 text-align: center;
-max-width: 1100px;
 margin: 0 auto;
 `
 

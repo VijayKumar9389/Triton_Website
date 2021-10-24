@@ -16,6 +16,7 @@ left: 0;
 transition: 0.3s ease-in-out;
 opacity: ${({isOpen}) => (isOpen ? '100%' : '0')};
 top: ${({isOpen}) => (isOpen ? '0' : '-100%')};
+overflow-x: hidden;
 `
 
 export const CloseIcon = styled(FaTimes)`
@@ -30,6 +31,7 @@ background: transparent;
 font-size: 2rem;
 cursor: pointer;
 outline: none;
+-webkit-tap-highlight-color: transparent;
 `
 export const SidebarWrapper = styled.div`
 color: #fff;
@@ -58,6 +60,7 @@ text-decoration: none;
 color: #fff;
 cursor: pointer;
 
+
 &:hover {
     color: #68bd45;
     transition: 0.2s ease-in-out;
@@ -73,7 +76,7 @@ export const SidebarRoute = styled(LinkS)`
 border-radius: 50px;
 background: #68bd45;
 padding: 14px 20px;
-color: #010606;
+color: #fff;
 font-size: 16px;
 outline: none;
 border: none;
@@ -86,9 +89,9 @@ transition: all 0.2s ease-in-out;
 text-decoration: none;
 
 &:hover {
-    transition: all 0.2s all ease-in-out;
+    transition: all 0.1s all ease-in-out;
     background: #fff;
-    color: #010606;
+    color: black;
 }
 `
 

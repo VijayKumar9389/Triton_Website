@@ -14,6 +14,7 @@ position: sticky;
 top: 0;
 z-index: 100;
 transition: 0.8s all ease;
+overflow-x: hidden;
 `
 
 export const NavbarContainer = styled.div`
@@ -23,7 +24,8 @@ height: 80px;
 z-index: 1000;
 width: 100%;
 padding: 0 24px;
-max-width: 1100px;
+
+
 `
 
 export const NavLogo = styled(LinkS)`
@@ -36,7 +38,7 @@ export const NavLogo = styled(LinkS)`
     margin-left: 24px;
     font-weight: bold;
     text-decoration: none;
-    
+    margin-left: 0;
 `
 export const Navlogo = styled.img`
 width: auto;
@@ -56,6 +58,7 @@ display: none;
     font-size: 1.8rem;
     cursor: pointer;
     color: ${({ scrollNav }) => (scrollNav ? '#fff' : 'black')};
+    -webkit-tap-highlight-color: transparent;
 }
 `
 
