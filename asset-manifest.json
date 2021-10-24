@@ -1,17 +1,19 @@
 {
   "files": {
-    "main.css": "/Triton_Website/static/css/main.aa08afa1.chunk.css",
-    "main.js": "/Triton_Website/static/js/main.83cff1fc.chunk.js",
-    "main.js.map": "/Triton_Website/static/js/main.83cff1fc.chunk.js.map",
+    "main.css": "/Triton_Website/static/css/main.9aeddaca.chunk.css",
+    "main.js": "/Triton_Website/static/js/main.5214a46e.chunk.js",
+    "main.js.map": "/Triton_Website/static/js/main.5214a46e.chunk.js.map",
     "runtime-main.js": "/Triton_Website/static/js/runtime-main.11742409.js",
     "runtime-main.js.map": "/Triton_Website/static/js/runtime-main.11742409.js.map",
-    "static/js/2.ebed7523.chunk.js": "/Triton_Website/static/js/2.ebed7523.chunk.js",
-    "static/js/2.ebed7523.chunk.js.map": "/Triton_Website/static/js/2.ebed7523.chunk.js.map",
+    "static/css/2.7fc9bc2b.chunk.css": "/Triton_Website/static/css/2.7fc9bc2b.chunk.css",
+    "static/js/2.bf253dee.chunk.js": "/Triton_Website/static/js/2.bf253dee.chunk.js",
+    "static/js/2.bf253dee.chunk.js.map": "/Triton_Website/static/js/2.bf253dee.chunk.js.map",
     "index.html": "/Triton_Website/index.html",
-    "static/css/main.aa08afa1.chunk.css.map": "/Triton_Website/static/css/main.aa08afa1.chunk.css.map",
-    "static/js/2.ebed7523.chunk.js.LICENSE.txt": "/Triton_Website/static/js/2.ebed7523.chunk.js.LICENSE.txt",
-    "static/media/ImageOne.0cd637bb.jpg": "/Triton_Website/static/media/ImageOne.0cd637bb.jpg",
-    "static/media/ImageThree.88d017f8.jpg": "/Triton_Website/static/media/ImageThree.88d017f8.jpg",
+    "static/css/2.7fc9bc2b.chunk.css.map": "/Triton_Website/static/css/2.7fc9bc2b.chunk.css.map",
+    "static/css/main.9aeddaca.chunk.css.map": "/Triton_Website/static/css/main.9aeddaca.chunk.css.map",
+    "static/js/2.bf253dee.chunk.js.LICENSE.txt": "/Triton_Website/static/js/2.bf253dee.chunk.js.LICENSE.txt",
+    "static/media/ImageOne.eca4f591.jpg": "/Triton_Website/static/media/ImageOne.eca4f591.jpg",
+    "static/media/ImageThree.4ed43b31.jpeg": "/Triton_Website/static/media/ImageThree.4ed43b31.jpeg",
     "static/media/ImageTwo.9f38c5d3.jpg": "/Triton_Website/static/media/ImageTwo.9f38c5d3.jpg",
     "static/media/ImgFive.a42d1e33.svg": "/Triton_Website/static/media/ImgFive.a42d1e33.svg",
     "static/media/ImgFour.07b91fe9.svg": "/Triton_Website/static/media/ImgFour.07b91fe9.svg",
@@ -30,8 +32,9 @@
   },
   "entrypoints": [
     "static/js/runtime-main.11742409.js",
-    "static/js/2.ebed7523.chunk.js",
-    "static/css/main.aa08afa1.chunk.css",
-    "static/js/main.83cff1fc.chunk.js"
+    "static/css/2.7fc9bc2b.chunk.css",
+    "static/js/2.bf253dee.chunk.js",
+    "static/css/main.9aeddaca.chunk.css",
+    "static/js/main.5214a46e.chunk.js"
   ]
 }
